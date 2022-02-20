@@ -43,7 +43,7 @@
     cursor: initial;
   }
   @media only screen and (max-width: 600px) {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
   //Navbar
   .nav {
@@ -432,7 +432,7 @@
     padding: 0 5rem;
   }
   @media only screen and (max-width: 600px) {
-    padding: 0.5rem;
+    padding: 2rem;
   }
   .why {
     width: 50%;
@@ -471,6 +471,9 @@
       flex-direction: column;
     }
     .text {
+      @media only screen and (max-width: 600px) {
+        height: 55%;
+      }
       .heading {
         font-size: 2rem;
         font-weight: 700;
@@ -757,6 +760,6 @@
   .bottom {
     width: 100%;
     font-size: 44rem;
-    padding: 0.5rem;
+    padding: 2rem;
   }
 }
