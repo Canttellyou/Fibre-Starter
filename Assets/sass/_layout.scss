@@ -670,6 +670,10 @@
         line-height: 0.5;
         @media only screen and (max-width: 600px) {
           line-height: 1;
+          svg {
+            width: 3rem;
+            height: 3rem;
+          }
         }
         .name {
           margin-left: 1.5rem;
