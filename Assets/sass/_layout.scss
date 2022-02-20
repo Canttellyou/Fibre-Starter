@@ -42,6 +42,9 @@
   @include respond(tab-small) {
     cursor: initial;
   }
+  @media only screen and (max-width: 600px) {
+    padding: 0 2rem;
+  }
   //Navbar
   .nav {
     @include link-dec;
@@ -184,7 +187,7 @@
           width: 45rem;
         }
         @media only screen and (max-width: 400px) {
-          width: 35rem;
+          width: 32rem;
         }
       }
     }
@@ -428,7 +431,9 @@
   @include respond(desktop-min) {
     padding: 0 5rem;
   }
-
+  @media only screen and (max-width: 600px) {
+    padding: 0 2rem;
+  }
   .why {
     width: 50%;
     margin-top: 10rem;
@@ -697,6 +702,9 @@
   @include respond(tab-min) {
     flex-direction: column;
     padding: 5rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 2rem;
   }
   & > * {
     &:not(:first-child),
