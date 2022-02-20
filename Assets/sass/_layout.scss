@@ -102,6 +102,9 @@
         &__count {
           color: $color-black-light;
           margin-left: 1.5rem;
+          @include respond(phone-small) {
+            margin-right: 0.2rem;
+          }
         }
       }
       &__heading {
@@ -155,7 +158,7 @@
         :last-child {
           margin-left: 1.5rem;
           @media only screen and (max-width: 400px) {
-            margin-left: 0.2rem;
+            margin-left: 0;
           }
         }
         .credit {
@@ -541,6 +544,9 @@
         font-size: 3.5rem;
         font-weight: 700;
         margin-bottom: -0.8rem;
+        @include respond(phone-small) {
+          font-size: 3rem;
+        }
       }
       p {
         font-size: 1.8rem;
@@ -767,6 +773,5 @@
   .bottom {
     width: 100%;
     font-size: 44rem;
-    padding: 2rem;
   }
 }
