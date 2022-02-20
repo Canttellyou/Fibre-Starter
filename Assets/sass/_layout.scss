@@ -154,6 +154,9 @@
         align-items: center;
         :last-child {
           margin-left: 1.5rem;
+          @media only screen and (max-width: 400px) {
+            margin-left: 0.2rem;
+          }
         }
         .credit {
           font-size: 1.7rem;
@@ -187,7 +190,7 @@
           width: 45rem;
         }
         @media only screen and (max-width: 400px) {
-          width: 32rem;
+          width: 33rem;
         }
       }
     }
@@ -441,6 +444,9 @@
     @include respond(phone-ext-large) {
       width: 100% !important;
     }
+    @media only screen and (max-width: 600px) {
+      padding: 0 2rem;
+    }
     .top {
       color: $color-primary;
       font-size: 1.9rem;
@@ -469,6 +475,7 @@
     @media only screen and (max-width: 600px) {
       display: flex;
       flex-direction: column;
+      padding: 0 2rem;
     }
     .text {
       @media only screen and (max-width: 600px) {
