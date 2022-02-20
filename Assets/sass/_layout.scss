@@ -432,7 +432,7 @@
     padding: 0 5rem;
   }
   @media only screen and (max-width: 600px) {
-    padding: 0 2rem;
+    padding: 0.5rem;
   }
   .why {
     width: 50%;
@@ -476,6 +476,9 @@
         font-weight: 700;
         color: $color-black;
         line-height: 1.1;
+        @media only screen and (max-width: 600px) {
+          font-size: 1.8rem;
+        }
       }
       .main-text {
         font-size: 1.8rem;
@@ -703,9 +706,7 @@
     flex-direction: column;
     padding: 5rem;
   }
-  @media only screen and (max-width: 600px) {
-    padding: 2rem;
-  }
+
   & > * {
     &:not(:first-child),
     &:not(:last-child) {
@@ -756,5 +757,6 @@
   .bottom {
     width: 100%;
     font-size: 44rem;
+    padding: 0.5rem;
   }
 }
