@@ -1,0 +1,149 @@
+body {
+  background-color: white;
+  cursor: default;
+}
+
+.section__signup {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  line-height: 1;
+  @include respond(tab-min) {
+    flex-direction: column;
+  }
+  @include links;
+  a:link,
+  a:visited {
+    color: $color-primary;
+    font-weight: 600;
+  }
+  &--form {
+    padding: 1rem 12rem;
+    width: 55%;
+    @include respond(tab-min) {
+      width: 100%;
+    }
+    @include respond(tab-small) {
+      width: 100%;
+      padding: 1rem 4rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+    .create {
+      font-size: 2.4rem;
+    }
+    form {
+      font-family: inherit;
+      label {
+        &:not(:last-child) {
+          font-size: 2rem;
+          font-weight: 600;
+        }
+        margin-top: 2rem;
+        margin-bottom: 0.7rem;
+      }
+      input {
+        font-size: 1.8rem;
+        padding: 2rem;
+        border: none;
+        border: 1.5px solid rgb(212, 212, 212);
+        border-radius: 5px;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+      }
+      .checkbox {
+        margin-top: 2.5rem;
+        font-family: inherit;
+        width: 100%;
+
+        label {
+          font-size: 1.9rem;
+          word-spacing: 0.2rem;
+          line-height: 1.4;
+        }
+      }
+      .submit {
+        margin-top: 1.5rem;
+        width: 100%;
+        font-weight: 600;
+        border-radius: 7px;
+        padding: 2.3rem 2rem;
+      }
+    }
+    .already {
+      display: flex;
+      justify-content: center;
+      font-size: 1.7rem;
+      color: $color-black-light;
+    }
+    .password {
+      position: relative;
+
+      span {
+        position: absolute;
+        right: 20px;
+        top: 6rem;
+        width: 4rem;
+        height: 4rem;
+        background: url("../noun-eye-258303.svg");
+        background-size: contain;
+        cursor: pointer;
+      }
+      .eyesecond {
+        background: url("../new-svg/noun-eye.svg");
+        background-size: contain;
+      }
+    }
+    .policy-length {
+      font-size: 2rem;
+      padding: 2rem;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 7px;
+      overflow: hidden;
+      color: $color-primary;
+
+      display: none;
+      &.active {
+        display: initial;
+      }
+    }
+  }
+
+  &--image {
+    width: 45%;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 7rem;
+    color: white;
+    text-align: center;
+    @include respond(tab-min) {
+      width: 100%;
+      padding: 4rem 7rem;
+    }
+    @include respond(tab-small) {
+      display: none;
+    }
+
+    .content {
+      img {
+        width: 100%;
+        height: 40rem;
+      }
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        opacity: 0.8;
+      }
+    }
+  }
+}

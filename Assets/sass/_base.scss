@@ -1,0 +1,129 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop-min {
+    @media only screen and (max-width: 64em) {
+      @content;
+    }
+  } @else if $breakpoint == tab-min {
+    @media only screen and (max-width: 52.5em) {
+      @content;
+    }
+  } @else if $breakpoint == tab-small {
+    @media only screen and (max-width: 50.65em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-ext-large {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-large {
+    @media only screen and (max-width: 46.875em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-mid {
+    @media only screen and (max-width: 40em) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
+    @media only screen and (max-width: 36em) {
+      @content;
+    }
+  } @else if $breakpoint == phone-small {
+    @media only screen and (max-width: 26.6em) {
+      @content;
+    }
+  }
+}
+
+$color-background-primary: #fbf8f3;
+$color-background-white: #fff;
+$color-primary: #4d13d1;
+$color-primary-dark: #3f10ad;
+$padding-body: 0 11rem;
+
+$color-black: black;
+$color-black-light: #807f7e;
+
+@mixin links {
+  a:link,
+  a:active,
+  a:visited {
+    color: inherit;
+    font-family: inherit;
+  }
+}
+@mixin trans-time {
+  transition: all 0.2s;
+}
+@mixin trans-top {
+  transform: translateY(-4px);
+}
+@mixin link-dec {
+  a:link,
+  a:active,
+  a:visited {
+    text-decoration: none;
+  }
+}
+@mixin link-active {
+  &:active {
+    transform: translateY(5px);
+  }
+}
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateY(-9rem);
+  }
+}
+@keyframes menu-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+@keyframes eyes {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px=62.5%
+  // background-color: #000;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 0;
+  cursor: none;
+  @include respond(tab-small) {
+    cursor: initial;
+  }
+}
